@@ -14,7 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            NavigationLink(destination: TimerView(timeRemaining: $setTime, constTime: workoutTime, workoutType: "Set")) {
+            NavigationLink(destination: TimerView(timeRemaining: $setTime, constTime: setTime, workoutType: "Set")) {
                 Text("Set")
             }
             

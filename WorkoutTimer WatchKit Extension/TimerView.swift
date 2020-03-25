@@ -39,7 +39,7 @@ struct TimerView: View {
                 Button(action: {
                     self.timeRemaining = self.constTime
                 }) {
-                    Text("ResetTimer")
+                    Text("Reset Timer")
                 }
             }
         }
