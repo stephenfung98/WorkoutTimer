@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TimerView: View {
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var number = 1
     
     @Binding var timeRemaining: Int
     var constTime: Int
@@ -17,19 +18,25 @@ struct TimerView: View {
     
     var body: some View {
         VStack {
-            Text(workoutType)
+            Text(workoutType + "\(number)")
+                .font(.largeTitle)
             
             Spacer()
             
             Text(timeRemaining.timeDisplay())
                 .onReceive(timer) { _ in
                     if self.timeRemaining > 0 {
+                        if self.timeRemaining == 10 {
+                            WKInterfaceDevice.current().play(.notification)
+                        }
                         self.timeRemaining -= 1
                         if self.timeRemaining == 0 {
-                            WKInterfaceDevice.current().play(.click)
+                            WKInterfaceDevice.current().play(.success)
                         }
                     }
-            }.onAppear {
+            }
+            .font(.largeTitle)
+            .onAppear {
                 self.timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
             }
             
@@ -38,6 +45,7 @@ struct TimerView: View {
             if timeRemaining == 0 {
                 Button(action: {
                     self.timeRemaining = self.constTime
+                    self.number += 1
                 }) {
                     Text("Reset Timer")
                 }
