@@ -9,20 +9,39 @@
 import SwiftUI
 
 struct TimerView: View {
-    @State var timeRemaining: Int
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
+    @Binding var timeRemaining: Int
+    var constTime: Int
+    var workoutType: String
+    
     var body: some View {
-        Text(timeRemaining.timeDisplay())
-            .onReceive(timer) { _ in
-                if self.timeRemaining > 0 {
-                    self.timeRemaining -= 1
-                    if self.timeRemaining == 0 {
-                        WKInterfaceDevice.current().play(.click)
+        VStack {
+            Text(workoutType)
+            
+            Spacer()
+            
+            Text(timeRemaining.timeDisplay())
+                .onReceive(timer) { _ in
+                    if self.timeRemaining > 0 {
+                        self.timeRemaining -= 1
+                        if self.timeRemaining == 0 {
+                            WKInterfaceDevice.current().play(.click)
+                        }
                     }
+            }.onAppear {
+                self.timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+            }
+            
+            Spacer()
+            
+            if timeRemaining == 0 {
+                Button(action: {
+                    self.timeRemaining = self.constTime
+                }) {
+                    Text("ResetTimer")
                 }
-        }.onAppear {
-            self.timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+            }
         }
     }
 }
@@ -39,6 +58,6 @@ extension Int {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(timeRemaining: 50)
+        TimerView(timeRemaining: .constant(50), constTime: 50, workoutType: "Set")
     }
 }

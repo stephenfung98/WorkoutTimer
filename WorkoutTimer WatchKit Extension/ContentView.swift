@@ -14,11 +14,11 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            NavigationLink(destination: TimerView(timeRemaining: setTime)) {
+            NavigationLink(destination: TimerView(timeRemaining: $setTime, constTime: workoutTime, workoutType: "Set")) {
                 Text("Set")
             }
             
-            NavigationLink(destination: TimerView(timeRemaining: workoutTime)) {
+            NavigationLink(destination: TimerView(timeRemaining: $workoutTime, constTime: workoutTime, workoutType: "Workout")) {
                 Text("Workout")
             }
             
