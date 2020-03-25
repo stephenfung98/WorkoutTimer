@@ -204,7 +204,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = "Stephen Fung";
+				ORGANIZATIONNAME = "Jay Lliguichushca";
 				TargetAttributes = {
 					3ED39BA323E155AA008A631B = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -231,8 +231,8 @@
 			projectRoot = "";
 			targets = (
 				3ED39BA323E155AA008A631B /* WorkoutTimer */,
-				3ED39BA723E155AA008A631B /* WorkoutTimer WatchKit App */,
 				3ED39BB623E155AC008A631B /* WorkoutTimer WatchKit Extension */,
+				3ED39BA723E155AA008A631B /* WorkoutTimer WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -423,7 +423,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkoutTimer WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 4KBD465JXX;
+				DEVELOPMENT_TEAM = D7ZQ7ZU696;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "WorkoutTimer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -431,7 +431,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.buffalo.sfung3.WorkoutTimer.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.jaylligu.WorkoutTimer.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -447,7 +447,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkoutTimer WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 4KBD465JXX;
+				DEVELOPMENT_TEAM = D7ZQ7ZU696;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "WorkoutTimer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,7 +455,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.buffalo.sfung3.WorkoutTimer.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.jaylligu.WorkoutTimer.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -471,10 +471,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4KBD465JXX;
+				DEVELOPMENT_TEAM = D7ZQ7ZU696;
 				IBSC_MODULE = WorkoutTimer_WatchKit_Extension;
 				INFOPLIST_FILE = "WorkoutTimer WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.buffalo.sfung3.WorkoutTimer.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.jaylligu.WorkoutTimer.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -490,10 +490,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4KBD465JXX;
+				DEVELOPMENT_TEAM = D7ZQ7ZU696;
 				IBSC_MODULE = WorkoutTimer_WatchKit_Extension;
 				INFOPLIST_FILE = "WorkoutTimer WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.buffalo.sfung3.WorkoutTimer.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.jaylligu.WorkoutTimer.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -508,9 +508,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4KBD465JXX;
+				DEVELOPMENT_TEAM = D7ZQ7ZU696;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.buffalo.sfung3.WorkoutTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.jaylligu.WorkoutTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -521,9 +521,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4KBD465JXX;
+				DEVELOPMENT_TEAM = D7ZQ7ZU696;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.buffalo.sfung3.WorkoutTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.jaylligu.WorkoutTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
