@@ -18,7 +18,7 @@ struct TimerView: View {
     
     var body: some View {
         VStack {
-            Text(workoutType + "\(number)")
+            Text(workoutType == "Set" ? "\(workoutType) # \(number)" : workoutType)
                 .font(.largeTitle)
             
             Spacer()
@@ -26,12 +26,12 @@ struct TimerView: View {
             Text(timeRemaining.timeDisplay())
                 .onReceive(timer) { _ in
                     if self.timeRemaining > 0 {
-                        if self.timeRemaining == 10 {
-                            WKInterfaceDevice.current().play(.notification)
+                        if self.timeRemaining == 11 {
+                            WKInterfaceDevice.current().play(.success)
                         }
                         self.timeRemaining -= 1
                         if self.timeRemaining == 0 {
-                            WKInterfaceDevice.current().play(.success)
+                            WKInterfaceDevice.current().play(.notification)
                         }
                     }
             }
