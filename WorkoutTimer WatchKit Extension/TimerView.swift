@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct TimerView: View {
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -15,6 +16,24 @@ struct TimerView: View {
     @Binding var timeRemaining: Int
     var constTime: Int
     var workoutType: String
+    
+    var healthStore = HKHealthStore()
+    var workoutSession: HKWorkoutSession?
+    
+    let config = HKWorkoutConfiguration()
+    
+    init(timeRemaining: Binding<Int>, constTime: Int, workoutType: String) {
+        self._timeRemaining = timeRemaining
+        self.constTime = constTime
+        self.workoutType = workoutType
+        config.locationType = .indoor
+        
+        do {
+            workoutSession = nil
+            workoutSession = try? HKWorkoutSession(healthStore: healthStore, configuration: config)
+            workoutSession?.prepare()
+        }
+    }
     
     var body: some View {
         VStack {
@@ -26,11 +45,10 @@ struct TimerView: View {
             Text(timeRemaining.timeDisplay())
                 .onReceive(timer) { _ in
                     if self.timeRemaining > 0 {
-                        if self.timeRemaining == 11 {
-                            WKInterfaceDevice.current().play(.success)
-                        }
                         self.timeRemaining -= 1
-                        if self.timeRemaining == 0 {
+                        if self.timeRemaining == 10 {
+                            WKInterfaceDevice.current().play(.success)
+                        } else if self.timeRemaining == 0 {
                             WKInterfaceDevice.current().play(.notification)
                         }
                     }
@@ -66,6 +84,6 @@ extension Int {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(timeRemaining: .constant(50), constTime: 50, workoutType: "Set")
+        TimerView(timeRemaining: .constant(50), constTime: 50, workoutType: "Set # 1")
     }
 }

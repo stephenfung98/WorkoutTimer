@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E57BCF524307DA4009464C1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E57BCF424307DA4009464C1 /* HealthKit.framework */; };
 		3ED39BA923E155AA008A631B /* WorkoutTimer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3ED39BA823E155AA008A631B /* WorkoutTimer WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3ED39BAF23E155AA008A631B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED39BAD23E155AA008A631B /* Interface.storyboard */; };
 		3ED39BB123E155AC008A631B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED39BB023E155AC008A631B /* Assets.xcassets */; };
@@ -63,6 +64,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E57BCF224307DA4009464C1 /* WorkoutTimer WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WorkoutTimer WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		3E57BCF424307DA4009464C1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		3ED39BA423E155AA008A631B /* WorkoutTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED39BA823E155AA008A631B /* WorkoutTimer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorkoutTimer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED39BAE23E155AA008A631B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -84,18 +87,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E57BCF524307DA4009464C1 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E57BCF324307DA4009464C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E57BCF424307DA4009464C1 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3ED39B9D23E155AA008A631B = {
 			isa = PBXGroup;
 			children = (
 				3ED39BAC23E155AA008A631B /* WorkoutTimer WatchKit App */,
 				3ED39BBB23E155AC008A631B /* WorkoutTimer WatchKit Extension */,
 				3ED39BA523E155AA008A631B /* Products */,
+				3E57BCF324307DA4009464C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +135,7 @@
 		3ED39BBB23E155AC008A631B /* WorkoutTimer WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3E57BCF224307DA4009464C1 /* WorkoutTimer WatchKit Extension.entitlements */,
 				3ED39BBC23E155AC008A631B /* ContentView.swift */,
 				3ED39BDA23E16685008A631B /* TimerView.swift */,
 				3ED39BDC23E166FC008A631B /* SettingsView.swift */,
@@ -421,9 +435,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WorkoutTimer WatchKit Extension/WorkoutTimer WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkoutTimer WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = D7ZQ7ZU696;
+				DEVELOPMENT_TEAM = T5FS4K33MY;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "WorkoutTimer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -431,7 +446,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.jaylligu.WorkoutTimer.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.buffalo.sfung.WorkoutTimer.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -445,9 +460,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WorkoutTimer WatchKit Extension/WorkoutTimer WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkoutTimer WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = D7ZQ7ZU696;
+				DEVELOPMENT_TEAM = T5FS4K33MY;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "WorkoutTimer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,7 +471,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.jaylligu.WorkoutTimer.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.buffalo.sfung.WorkoutTimer.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -471,10 +487,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D7ZQ7ZU696;
+				DEVELOPMENT_TEAM = T5FS4K33MY;
 				IBSC_MODULE = WorkoutTimer_WatchKit_Extension;
 				INFOPLIST_FILE = "WorkoutTimer WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.jaylligu.WorkoutTimer.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.buffalo.sfung.WorkoutTimer.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -490,10 +506,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D7ZQ7ZU696;
+				DEVELOPMENT_TEAM = T5FS4K33MY;
 				IBSC_MODULE = WorkoutTimer_WatchKit_Extension;
 				INFOPLIST_FILE = "WorkoutTimer WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.jaylligu.WorkoutTimer.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.buffalo.sfung3.WorkoutTimer.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -508,9 +524,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D7ZQ7ZU696;
+				DEVELOPMENT_TEAM = T5FS4K33MY;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.jaylligu.WorkoutTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.buffalo.sfung.WorkoutTimer.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -521,9 +537,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D7ZQ7ZU696;
+				DEVELOPMENT_TEAM = T5FS4K33MY;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.jaylligu.WorkoutTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.buffalo.sfung.WorkoutTimer.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
